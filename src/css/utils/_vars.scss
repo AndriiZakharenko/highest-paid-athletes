@@ -7,8 +7,11 @@ $containerWidth: $maxWidthContainer + $containerPadding; // Container Width (wit
 
 //========================= BREAKPOINTS =========================//
 $pc: toEm($containerWidth); // PC
+$large: toEm(1100); // Large
 $tablet: toEm(991.98); // Tablet
+$medium: toEm(820); // Medium
 $mobileLarge: toEm(767.98); // Mobile Large
+$small: toEm(550); // Small
 $mobileSmall: toEm(479.98); // Mobile Small
 $mobileMini: toEm(320); // Mobile Mini
 
@@ -23,6 +26,7 @@ $main-text: #000;
 $heading: #2F4F4F;
 $card-background: #eee;
 $page-background: #fff;
+$number-color: #8B0000;
 
 //========================= WEIGHT =========================//
 $regular: 400;

@@ -1,28 +1,84 @@
 .persons {
-    padding: toRem(30) toRem(55) 0 toRem(55);
-
+    
     // .persons__container
     &__container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        row-gap: toRem(40);
+        grid-template-rows: repeat(5, toRem(290));
         column-gap: toRem(30);
+        row-gap: toRem(40);
+        padding: toRem(30) toRem(55) 0 toRem(55);
 
-        @media (max-width: $tablet) {
+        @media (max-width: $large) {
             grid-template-columns: repeat(3, 1fr);
-            
+            grid-template-rows: repeat(5, toRem(290));
+            column-gap: toRem(25);
+            row-gap: toRem(35);
+            padding: toRem(25) toRem(50) 0 toRem(50);
         }
 
-        @media (max-width: $mobileLarge) {
+        @media (max-width: $medium) {
             grid-template-columns: repeat(2, 1fr);
-            
+            column-gap: toRem(20);
+            row-gap: toRem(30);
+            padding: toRem(20) toRem(45) 0 toRem(45);
+        }
+
+        @media (max-width: $small) {
+            grid-template-columns: 1fr;
+            column-gap: toRem(15);
+            row-gap: toRem(25);
+            padding: toRem(15) toRem(40) 0 toRem(40);
         }
     }
 }
 
 .person {
+    display: flex;
+    flex-direction: column;
+    width: toRem(220);
+    height: toRem(290);
+    transition: all 1s ease;
+    justify-self: center;
+    align-items: center;
+
+    &:hover{
+        background-color: $card-background;
+        border-radius: toRem(10);
+
+        .person__photo{
+            margin-bottom: toRem(20);
+        }
+
+        .person__photo img {
+            border-radius: toRem(10);
+            transform: scale(1.1);
+        }
+
+        .extra-person{
+            padding-top: toRem(10);
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: $large) {
+        width: toRem(210);
+        height: toRem(280);
+    }
+
+    @media (max-width: $medium) {
+        width: toRem(200);
+        height: toRem(260);
+    }
+
+    @media (max-width: $small) {
+        width: toRem(187);
+        height: toRem(250);
+    }
+
     // .person_mayweather
     &_mayweather {
+        
     }
 
     // .person_messi
@@ -33,8 +89,8 @@
     &_ronaldo {
     }
 
-    // .person_McGregor
-    &_McGregor {
+    // .person_mcgregor
+    &_mcgregor {
     }
 
     // .person_neymar
@@ -67,8 +123,7 @@
         width: toRem(200);
         height: toRem(200);
         margin-bottom: toRem(8);
-
-        justify-items: center;
+        transition: all 1s ease;
 
         img {
             position: absolute;
@@ -78,18 +133,67 @@
             left: 0;
             object-fit: cover;
             border-radius: 50%;
+            transition: all 1s ease;
+
         }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 40%;
+            left: 77%;
+            background-color: $page-background;
+            color: $number-color;
+            width: toRem(32);
+            height: toRem(32);
+            border-radius: 50%;
+            z-index: 5;
+        }
+
+        @media (max-width: $large) {
+            width: toRem(190);
+            height: toRem(190);
+        }
+
+        @media (max-width: $medium) {
+            width: toRem(180);
+            height: toRem(180);
+
+            &::before{
+                width: toRem(30);
+                height: toRem(30);
+            }
+        }
+
+        @media (max-width: $small) {
+            width: toRem(170);
+            height: toRem(170);
+        }
+        
     }
 
     // .person__rank
     &__rank {
-        display: none;
+        position: absolute;
+        top: 44%;
+        left: 83%;
+        color: $number-color;
+        font-size: toRem(16);
+        z-index: 5;
+
+    }
+
+    // .person__rank_10
+    &__rank_10{
+        top: 44%;
+        left: 80%;
     }
 
     // .person__details
     &__details {
         text-align: center;
         justify-content: center;
+
     }
 
     // .person__name
@@ -97,15 +201,25 @@
         font-size: toRem(20);
         font-weight: $bold;
         color: $heading;
+
+        @media (max-width: $medium) {
+            font-size: toRem(18);
+        }
     }
 
     // .person__extra
     &__extra {
+        
     }
 }
 
 .extra-person {
-    display: none;
+    opacity: 0;
+    transition: opacity ease 1s, padding-top ease 1s;
+
+    @media (max-width: $medium) {
+        font-size: toRem(14);
+    }
 
     // .extra-person__sport
     &__sport {
