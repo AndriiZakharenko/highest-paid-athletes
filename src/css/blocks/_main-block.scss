@@ -70,11 +70,6 @@
         height: toRem(260);
     }
 
-    @media (max-width: $small) {
-        width: toRem(187);
-        height: toRem(250);
-    }
-
     // .person_mayweather
     &_mayweather {
         
@@ -152,21 +147,6 @@
         @media (max-width: $large) {
             width: toRem(190);
             height: toRem(190);
-        }
-
-        @media (max-width: $medium) {
-            width: toRem(180);
-            height: toRem(180);
-
-            &::before{
-                width: toRem(30);
-                height: toRem(30);
-            }
-        }
-
-        @media (max-width: $small) {
-            width: toRem(170);
-            height: toRem(170);
         }
         
     }
