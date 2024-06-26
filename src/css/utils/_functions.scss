@@ -1,0 +1,34 @@
+//========================= REM / EM / PERCENT =========================//
+
+// REM
+@function toRem($px) {
+    $result: calc($px / 16) + rem;
+    @return $result;
+}
+
+// EM
+@function toEm($px, $current: 16) {
+    $result:calc($px / $current) + em;
+    @return $result;
+}
+
+// PERCENT
+@function toPercent($px, $from) {
+    $result: calc($px / $from) * 100%;
+    @return $result;
+}
+
+//========================= PREFIX =========================//
+@function prefix($property, $prefixes: webkit moz o ms) {
+    $vendor-prefixed-properties: transform background-clip background-size;
+    $result: ();
+
+    @each $prefix in $prefixes {
+        @if index($vendor-prefixed-properties, $property) {
+            $property: -#{$prefix}-#{$property};
+        }
+        $result: append($result, $property);
+    }
+    @return $result;
+}
+

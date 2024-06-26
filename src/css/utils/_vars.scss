@@ -1,0 +1,33 @@
+//========================= CONTAINER =========================//
+$maxWidth: 1920; // Max Layout Width
+$minWidth: 320; // Min Layout Width
+$maxWidthContainer: 1200; // Max Container Width (without padding)
+$containerPadding: 30; // Container paddings
+$containerWidth: $maxWidthContainer + $containerPadding; // Container Width (with paddings)
+
+//========================= BREAKPOINTS =========================//
+$pc: toEm($containerWidth); // PC
+$tablet: toEm(991.98); // Tablet
+$mobileLarge: toEm(767.98); // Mobile Large
+$mobileSmall: toEm(479.98); // Mobile Small
+$mobileMini: toEm(320); // Mobile Mini
+
+//========================= RESPONSIVE =========================//
+$responsiveType: 1; // 1 - responsive, 2 - breakpoints
+
+//========================= FONTS =========================//
+$arial: "Arial", sans-serif;
+
+//========================= COLORS =========================//
+$main-text: #000;
+$heading: #2F4F4F;
+$card-background: #eee;
+$page-background: #fff;
+
+//========================= WEIGHT =========================//
+$regular: 400;
+$bold: 700;
+
+//========================= HOVER =========================//
+$mouse-device: '(hover: hover) and (pointer: fine)'; // Mouse devices
+$touch-device: '(hover: none) and (pointer: coarse)'; // Touch devices

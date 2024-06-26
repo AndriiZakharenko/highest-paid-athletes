@@ -1,0 +1,117 @@
+.persons {
+    padding: toRem(30) toRem(55) 0 toRem(55);
+
+    // .persons__container
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: toRem(40);
+        column-gap: toRem(30);
+
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(3, 1fr);
+            
+        }
+
+        @media (max-width: $mobileLarge) {
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+    }
+}
+
+.person {
+    // .person_mayweather
+    &_mayweather {
+    }
+
+    // .person_messi
+    &_messi {
+    }
+
+    // .person_ronaldo
+    &_ronaldo {
+    }
+
+    // .person_McGregor
+    &_McGregor {
+    }
+
+    // .person_neymar
+    &_neymar {
+    }
+
+    // .person_lebron
+    &_lebron {
+    }
+
+    // .person_federer
+    &_federer {
+    }
+
+    // .person_curry
+    &_curry {
+    }
+
+    // .person_ryan
+    &_ryan {
+    }
+
+    // .person_stafford
+    &_stafford {
+    }
+
+    // .person__photo
+    &__photo {
+        position: relative;
+        width: toRem(200);
+        height: toRem(200);
+        margin-bottom: toRem(8);
+
+        justify-items: center;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    // .person__rank
+    &__rank {
+        display: none;
+    }
+
+    // .person__details
+    &__details {
+        text-align: center;
+        justify-content: center;
+    }
+
+    // .person__name
+    &__name {
+        font-size: toRem(20);
+        font-weight: $bold;
+        color: $heading;
+    }
+
+    // .person__extra
+    &__extra {
+    }
+}
+
+.extra-person {
+    display: none;
+
+    // .extra-person__sport
+    &__sport {
+    }
+
+    // .extra-person__pay
+    &__pay {
+    }
+}
