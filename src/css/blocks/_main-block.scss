@@ -201,9 +201,15 @@
 
     // .extra-person__sport
     &__sport {
+        &::after{
+            content: ",";
+        }
     }
 
     // .extra-person__pay
     &__pay {
+        &::before{
+            content: "$";
+        }
     }
 }
