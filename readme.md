@@ -2,7 +2,7 @@
 
 ### Description
 
-- Added catalog
+- Added catalog with "Athletes Cards"
 
 ### Stack
 
