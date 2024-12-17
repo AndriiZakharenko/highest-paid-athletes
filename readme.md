@@ -1,7 +1,17 @@
 # Highest-Paid Athletes
 
-- grid catalog with hover effects
+### Description
 
-## Demo Links
+- Added catalog
 
-- [DEMO LINK](https://AndriiZakharenko.github.io//Highest-Paid-Athletes/)
+### Stack
+
+- HTML (BEM)
+- CSS
+- JS
+- Adaptive
+
+### Demo links
+
+- [Demo](https://AndriiZakharenko.github.io/highest-paid-athletes/)
+
